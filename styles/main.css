@@ -693,7 +693,7 @@ p {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -60px -10px;
+  background: url("../img/css_sprites.png") -60px -10px;
 }
 
 .social__logo--tg::before {
@@ -705,7 +705,7 @@ p {
   border-radius: 50%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -110px -60px;
+  background: url("../img/css_sprites.png") -110px -60px;
 }
 
 .social__item:hover .social__logo--tg::after {
@@ -722,7 +722,7 @@ p {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -110px -10px;
+  background: url("../img/css_sprites.png") -110px -10px;
 }
 
 .social__logo--vk::before {
@@ -734,7 +734,7 @@ p {
   border-radius: 50%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -60px -110px;
+  background: url("../img/css_sprites.png") -60px -110px;
 }
 
 .social__item:hover .social__logo--vk::after {
@@ -751,7 +751,7 @@ p {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -10px -10px;
+  background: url("../img/css_sprites.png") -10px -10px;
 }
 
 .social__logo--fb::before {
@@ -763,7 +763,7 @@ p {
   border-radius: 50%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -60px -60px;
+  background: url("../img/css_sprites.png") -60px -60px;
 }
 
 .social__item:hover .social__logo--fb::after {
@@ -780,7 +780,7 @@ p {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -10px -60px;
+  background: url("../img/css_sprites.png") -10px -60px;
 }
 
 .social__logo--in::before {
@@ -792,7 +792,7 @@ p {
   border-radius: 50%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -10px -110px;
+  background: url("../img/css_sprites.png") -10px -110px;
 }
 
 .social__item:hover .social__logo--in::after {
