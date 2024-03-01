@@ -1,0 +1,151 @@
+.footer__container {
+  @include flex;
+  padding-top: 10px;
+}
+
+.footer__col {
+  @include flex;
+}
+
+.contacts {
+  padding-left: 7px;
+}
+
+.contacts__address {
+  font-family: 'Play';
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.footer__phone {
+  margin-left: 17px;
+}
+
+
+
+.social {
+  display: flex;
+  padding-right: 123px;
+}
+
+.social__item {
+  margin-right: 10px;
+}
+
+.social__logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+}
+
+.social__logo--tg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .3s ease;
+  background: url('../../img/css_sprites.png') -60px -10px;
+}
+
+.social__logo--tg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: opacity .3s ease;
+  background: url('../../img/css_sprites.png') -110px -60px;
+
+}
+
+.social__item:hover .social__logo--tg::after  {
+  opacity: 1;
+}
+
+
+.social__logo--vk::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .3s ease;
+  background: url('../../img/css_sprites.png') -110px -10px;
+}
+
+.social__logo--vk::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: opacity .3s ease;
+  background: url('../../img/css_sprites.png') -60px -110px;
+}
+
+.social__item:hover .social__logo--vk::after  {
+  opacity: 1;
+}
+
+.social__logo--fb::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .3s ease;
+  background: url('../../img/css_sprites.png') -10px -10px;
+}
+
+.social__logo--fb::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: opacity .3s ease;
+  background: url('../../img/css_sprites.png') -60px -60px;
+}
+
+.social__item:hover .social__logo--fb::after  {
+  opacity: 1;
+}
+
+.social__logo--in::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .3s ease;
+  background: url('../../img/css_sprites.png') -10px -60px;
+}
+
+.social__logo--in::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: opacity .3s ease;
+  background: url('../../img/css_sprites.png') -10px -110px;
+}
+
+.social__item:hover .social__logo--in::after  {
+  opacity: 1;
+}

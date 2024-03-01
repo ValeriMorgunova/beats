@@ -1,0 +1,127 @@
+html {
+    font-family: "Alegreya Sans", "Play", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: $bg-w;
+    color: $color;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    width: 163px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: $button;
+    color: #fff;
+    font-family: 'Play';
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0; 
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 1100px;
+}
+
+.maincontent {
+    background-repeat: no-repeat;
+    min-height: 100%; 
+    min-width: 100%;  
+    flex: 1;
+}
+
+.section {
+
+    height: 652px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1100px;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+h2 {
+    font-family: 'Play';
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h4 {
+    font-family: 'Play';
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+}
+

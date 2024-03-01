@@ -1,0 +1,33 @@
+.fixed {
+  position: fixed;
+  right: 308px;
+  top: 235px;
+}
+
+.fixed__item {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #666666;
+  border-radius: 50%;
+  margin: 15px 0;
+
+  &--active {
+    background:  #E01F3D;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: transparent;
+      border-radius: 50%;
+      border: 1px solid  #E01F3D;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.header,.menu__list{
+  @include flex;
+  font-family: 'Alegreya Sans';
+  font-size: 18px;
+}
+
+.header {
+  padding-top: 28px;
+}
+
+.menu__item {
+  padding-right: 28px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.phone {
+  position: relative;
+  margin-left: 29px;
+  margin-right: 186px;
+
+  &:before {
+    content: '';
+    display: block;
+    background: url("../../img/phone.png") no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 15px;
+    top: 5px;
+    left: -20px;
+  }
+}
+
+.contacts__phone {
+  font-family: 'Play';
+  font-size: 18px;
+  line-height: 21px;
+}
+
+
+

@@ -1,0 +1,59 @@
+.container__why {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 96px 0; 
+}
+
+.why__block {
+  margin-bottom: 56px;
+  padding-right: 158px;
+}
+
+.why__title {
+  margin-bottom: 7px;
+}
+
+.why__qual {
+  width: 590px; 
+  @include text;
+}
+
+.why__list {
+  display: flex;
+  padding-right: 160px;
+}
+
+.why__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 256px;
+
+}
+
+.why__dots {
+  margin: 0 4px;
+  padding-top: 60px;
+}
+
+.why__img {
+  @include flex;
+  justify-content: center;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: #F2F5F4;
+}
+
+.why__info {
+  padding: 24px 0;
+}
+
+
+.info__text {
+  @include text;
+  line-height: 19.5px;
+}
+
