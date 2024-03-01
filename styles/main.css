@@ -165,7 +165,7 @@ p {
 .phone:before {
   content: "";
   display: block;
-  background: url("../../img/phone.png") no-repeat;
+  background: url("../img/phone.png") no-repeat;
   position: absolute;
   width: 14px;
   height: 15px;
@@ -488,7 +488,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../../img/order.png") center center no-repeat;
+  background: url("../img/order.png") center center no-repeat;
   color: #fff;
   font-family: "Play";
 }
