@@ -19,7 +19,6 @@
 .phone {
   position: relative;
   margin-left: 29px;
-  margin-right: 186px;
 
   &:before {
     content: '';
@@ -33,7 +32,7 @@
   }
 }
 
-.contacts__phone {
+.phone__contacts {
   font-family: 'Play';
   font-size: 18px;
   line-height: 21px;

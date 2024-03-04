@@ -3,18 +3,15 @@
   background: url('../img/order.png') center center no-repeat;
   color: #fff;
   font-family: 'Play';
-
 }
 
 .order__title {
   text-align: center;
   margin: 51px 0;
-  padding-right: 155px;
 }
 
 .order__content {
   display: flex;
-  padding-right: 145px;
 }
 
 .order__col {
@@ -58,7 +55,7 @@
 
   &--textarea {
     height: 154px;
-    width: 450px;
+    width: 100%;
     resize: none;
     margin-bottom: 20px;
   }
@@ -78,12 +75,16 @@
   cursor: pointer;
   user-select: none;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
   &--checkbox {
     .radio__visible {
       border-radius: 4px;
 
       &::before {
-        background: url('../../img/checked.png') center no-repeat;
+        background: url('../img/checked.png') center no-repeat;
       }
     }
   }

@@ -1,14 +1,15 @@
-.container__why {
+.why {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 96px 0; 
 }
 
 .why__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 56px;
-  padding-right: 158px;
 }
 
 .why__title {
@@ -22,7 +23,7 @@
 
 .why__list {
   display: flex;
-  padding-right: 160px;
+  justify-content: space-between;
 }
 
 .why__item {
@@ -30,7 +31,26 @@
   flex-direction: column;
   align-items: center;
   width: 256px;
+  position: relative;
+  margin-right: 70px;
 
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 67px;
+    height: 21px;
+    background: url('../img/dots.png');
+    left: 87%;
+    top: 18%;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    &::after {
+      content: none;
+    }
+  }
 }
 
 .why__dots {

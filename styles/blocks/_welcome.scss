@@ -5,6 +5,7 @@
 
 .welcome {
   display: flex;
+  margin-top: 10%;
 }
 
 .advantage__list, .advantage__item  {
@@ -16,7 +17,7 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  width: 40%;
+  flex: 1;
   margin-top: 92px;
 }
 
@@ -36,13 +37,20 @@
   width: 75%;
 }
 
-.welcome__button {
+.button {
   margin-bottom: 67px;
 }
 
+.advantage__item {
+  margin-right: 27px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
 
 .advantage__img {
-  margin-right: 11px;
+  margin-right: 8px;
 } 
 
 .advantage__text {
@@ -51,8 +59,8 @@
 
 .welcome__image {
   max-width: 100%;
-  height: 489px;
   margin-top: 40px;
+  flex: 1;
 }
 
 
