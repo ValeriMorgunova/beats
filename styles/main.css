@@ -236,7 +236,7 @@ p {
   width: 75%;
 }
 
-.button {
+.welcome__button {
   margin-bottom: 67px;
 }
 
@@ -448,9 +448,9 @@ p {
   display: -ms-flexbox;
   display: flex;
   background: #F8FAF9;
-  margin-bottom: 15px;
   width: 940px;
   position: relative;
+  padding: 42px;
 }
 .reviews__info::before {
   content: "";
@@ -508,7 +508,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 42px;
+  margin-top: 50px;
 }
 
 .reviews__img {
@@ -670,7 +670,6 @@ p {
   border: none;
   background: transparent;
   font-weight: 400;
-  width: 70px;
 }
 
 .map {

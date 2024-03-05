@@ -17,9 +17,9 @@
 .reviews__info {
   display: flex;
   background: #F8FAF9;
-  margin-bottom: 15px;
   width: 940px;
   position: relative;
+  padding: 42px;
 
   &::before {
     content: '';
@@ -62,7 +62,7 @@
   @include flex;
   justify-content: center;
 
-  margin-top: 42px;
+  margin-top: 50px;
 }
 
 .reviews__img {
