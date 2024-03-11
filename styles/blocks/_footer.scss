@@ -78,7 +78,7 @@
   border-radius: 50%;
   opacity: 0;
   transition: opacity .3s ease;
-  background: url('../../img/css_sprites.png') -60px -10px;
+  background: url('../img/css_sprites.png') -60px -10px;
 
   @include tablets {
     display: none;
@@ -93,7 +93,7 @@
   height: rem(30px);
   border-radius: 50%;
   transition: opacity .3s ease;
-  background: url('../../img/css_sprites.png') -110px -60px;
+  background: url('../img/css_sprites.png') -110px -60px;
 }
 
 .social__item:hover .social__logo--tg::after  {
@@ -110,7 +110,7 @@
   border-radius: 50%;
   opacity: 0;
   transition: opacity .3s ease;
-  background: url('../../img/css_sprites.png') -110px -10px;
+  background: url('../img/css_sprites.png') -110px -10px;
 
   @include tablets {
     display: none;
@@ -125,7 +125,7 @@
   height: rem(30px);
   border-radius: 50%;
   transition: opacity .3s ease;
-  background: url('../../img/css_sprites.png') -60px -110px;
+  background: url('../img/css_sprites.png') -60px -110px;
 }
 
 .social__item:hover .social__logo--vk::after  {
@@ -141,7 +141,7 @@
   border-radius: 50%;
   opacity: 0;
   transition: opacity .3s ease;
-  background: url('../../img/css_sprites.png') -10px -10px;
+  background: url('../img/css_sprites.png') -10px -10px;
 
   @include tablets {
     display: none;
@@ -156,7 +156,7 @@
   height: rem(30px);
   border-radius: 50%;
   transition: opacity .3s ease;
-  background: url('../../img/css_sprites.png') -60px -60px;
+  background: url('../img/css_sprites.png') -60px -60px;
 }
 
 .social__item:hover .social__logo--fb::after  {
@@ -172,7 +172,7 @@
   border-radius: 50%;
   opacity: 0;
   transition: opacity .3s ease;
-  background: url('../../img/css_sprites.png') -10px -60px;
+  background: url('../img/css_sprites.png') -10px -60px;
 
   @include tablets {
     display: none;
@@ -187,7 +187,7 @@
   height: rem(30px);
   border-radius: 50%;
   transition: opacity .3s ease;
-  background: url('../../img/css_sprites.png') -10px -110px;
+  background: url('../img/css_sprites.png') -10px -110px;
 }
 
 .social__item:hover .social__logo--in::after  {
