@@ -298,7 +298,7 @@ p {
 }
 .welcome::before {
   content: "";
-  background: url("../../img/welcome.png") no-repeat;
+  background: url("../img/welcome.png") no-repeat;
   background-size: contain;
   position: absolute;
   right: 0;
@@ -931,7 +931,7 @@ p {
 
 .map {
   position: relative;
-  background: url("../../img/map.png") center no-repeat;
+  background: url("../img/map.png") center no-repeat;
   background-size: cover;
 }
 
@@ -1047,7 +1047,7 @@ p {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -60px -10px;
+  background: url("../img/css_sprites.png") -60px -10px;
 }
 @media screen and (max-width: 768px) {
   .social__logo--tg::after {
@@ -1064,7 +1064,7 @@ p {
   border-radius: 50%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -110px -60px;
+  background: url("../img/css_sprites.png") -110px -60px;
 }
 
 .social__item:hover .social__logo--tg::after {
@@ -1081,7 +1081,7 @@ p {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -110px -10px;
+  background: url("../img/css_sprites.png") -110px -10px;
 }
 @media screen and (max-width: 768px) {
   .social__logo--vk::after {
@@ -1098,7 +1098,7 @@ p {
   border-radius: 50%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -60px -110px;
+  background: url("../img/css_sprites.png") -60px -110px;
 }
 
 .social__item:hover .social__logo--vk::after {
@@ -1115,7 +1115,7 @@ p {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -10px -10px;
+  background: url("../img/css_sprites.png") -10px -10px;
 }
 @media screen and (max-width: 768px) {
   .social__logo--fb::after {
@@ -1132,7 +1132,7 @@ p {
   border-radius: 50%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -60px -60px;
+  background: url("../img/css_sprites.png") -60px -60px;
 }
 
 .social__item:hover .social__logo--fb::after {
@@ -1149,7 +1149,7 @@ p {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -10px -60px;
+  background: url("../img/css_sprites.png") -10px -60px;
 }
 @media screen and (max-width: 768px) {
   .social__logo--in::after {
@@ -1166,7 +1166,7 @@ p {
   border-radius: 50%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  background: url("../../img/css_sprites.png") -10px -110px;
+  background: url("../img/css_sprites.png") -10px -110px;
 }
 
 .social__item:hover .social__logo--in::after {
