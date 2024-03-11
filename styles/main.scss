@@ -1,7 +1,11 @@
+
 @import "./blocks/_variables.scss";
 @import "./blocks/_mixins.scss";
 @import "./blocks/_base.scss";
+@import "_media.scss";
 
+
+@import "./blocks/burger";
 @import "./blocks/header";
 @import "./blocks/welcome";
 @import "./blocks/fixed";
@@ -10,3 +14,4 @@
 @import "./blocks/order";
 @import "./blocks/map";
 @import "./blocks/footer";
+

@@ -1,6 +1,20 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 20px 0;
+}
 .footer__container {
   @include flex;
-  padding-top: 10px;
+  padding-top: rem(10px);
+
+  @include phones {
+    flex-direction: column;
+    justify-content: center;
+    
+  }
 }
 
 .footer__col {
@@ -8,33 +22,48 @@
 }
 
 .contacts {
-  padding-left: 7px;
+  padding-left: rem(7px);
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+  }
 }
 
 .contacts__address {
   font-family: 'Play';
-  font-size: 18px;
-  margin-bottom: 3px;
-}
+  font-size: rem(18px);
+  margin-bottom: rem(3px);
 
-.footer__phone {
-  margin-left: 17px;
+  @include phones {
+    margin-bottom: 12px;
+  }
 }
 
 
 
 .social {
   display: flex;
-  padding-right: 123px;
+  padding-right: rem(123px);
+
+  @include tablets {
+    padding-right: 0;
+  }
 }
 
 .social__item {
-  margin-right: 10px;
+  margin-right: rem(10px);
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social__logo {
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
   background: transparent;
   position: relative;
@@ -44,24 +73,27 @@
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
   opacity: 0;
   transition: opacity .3s ease;
   background: url('../../img/css_sprites.png') -60px -10px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .social__logo--tg::before {
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
   transition: opacity .3s ease;
   background: url('../../img/css_sprites.png') -110px -60px;
-
 }
 
 .social__item:hover .social__logo--tg::after  {
@@ -73,20 +105,24 @@
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
   opacity: 0;
   transition: opacity .3s ease;
   background: url('../../img/css_sprites.png') -110px -10px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .social__logo--vk::before {
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
   transition: opacity .3s ease;
   background: url('../../img/css_sprites.png') -60px -110px;
@@ -100,20 +136,24 @@
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
   opacity: 0;
   transition: opacity .3s ease;
   background: url('../../img/css_sprites.png') -10px -10px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .social__logo--fb::before {
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
   transition: opacity .3s ease;
   background: url('../../img/css_sprites.png') -60px -60px;
@@ -127,20 +167,24 @@
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
   opacity: 0;
   transition: opacity .3s ease;
   background: url('../../img/css_sprites.png') -10px -60px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .social__logo--in::before {
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 50%;
   transition: opacity .3s ease;
   background: url('../../img/css_sprites.png') -10px -110px;

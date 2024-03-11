@@ -1,42 +1,65 @@
-.header,.menu__list{
+.header {
   @include flex;
+  align-items: flex-start;
   font-family: 'Alegreya Sans';
-  font-size: 18px;
+  font-size: rem(18px);
 }
 
 .header {
-  padding-top: 28px;
+  padding-top: rem(28px);
+}
+
+.menu {
+  margin: 0 30px;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu__item {
-  padding-right: 28px;
+  padding-right: rem(24px);
+  
 
   &:last-child {
     padding-right: 0;
   }
 }
 
+.menu__link {
+  white-space: nowrap;
+}
+
 .phone {
   position: relative;
-  margin-left: 29px;
+  white-space: nowrap;
+}
 
-  &:before {
-    content: '';
-    display: block;
-    background: url("../img/phone.png") no-repeat;
-    position: absolute;
-    width: 14px;
-    height: 15px;
-    top: 5px;
-    left: -20px;
+.phone__img {
+  width: rem(14px);
+  height: rem(14px);
+  margin-right: 3px;
+}
+
+.header__phone {
+  @include tablets {
+    display: none;
   }
 }
 
 .phone__contacts {
   font-family: 'Play';
-  font-size: 18px;
-  line-height: 21px;
+  font-size: rem(18px);
+  line-height: rem(21px);
 }
+
+
 
 
 

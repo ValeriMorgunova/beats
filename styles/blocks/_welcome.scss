@@ -5,44 +5,81 @@
 
 .welcome {
   display: flex;
-  margin-top: 10%;
+  position: relative;
+
+  &::before {
+    content: '';
+    background: url('../../img/welcome.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 50%;
+    height: 100%;
+
+    @include tablets {
+      transform: translate(-50%, 0);
+    }
+
+    @include phones {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  @include tablets {
+    justify-content: center;
+    padding-top: 50%;
+  }
+
 }
 
-.advantage__list, .advantage__item  {
-  @include flex;
+.advantage__list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .welcome__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   text-align: left;
-  flex: 1;
-  margin-top: 92px;
+  width: 50%;
+  margin-top: rem(92px);
+
+  @include tablets {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 .welcome__title {
   font-family: 'Play';
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: 700;
-  line-height: 52px;
-  margin-bottom: 22px;
+  line-height: rem(52px);
+  margin-bottom: rem(22px);
+  word-wrap: break-word;
+
 }
 
 .welcome__text p{
   font-family: 'Alegreya Sans';
-  font-size: 21px;
-  line-height: 24px;
-  margin-bottom: 33px;
-  width: 75%;
+  font-size: rem(21px);
+  line-height: rem(24px);
+  margin-bottom: rem(33px);
 }
 
 .welcome__button {
-  margin-bottom: 67px;
+  margin-bottom: rem(67px);
+}
+
+.advantage {
+  @include tablets {
+    display: none;
+  }
 }
 
 .advantage__item {
-  margin-right: 27px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
 
   &:last-child {
     margin-right: 0;
@@ -50,17 +87,15 @@
 }
 
 .advantage__img {
-  margin-right: 8px;
+  margin-right: rem(7px);
+  width: rem(50px);
+  height: rem(50px);
 } 
 
 .advantage__text {
   font-family: 'Play';
 }
 
-.welcome__image {
-  max-width: 100%;
-  margin-top: 40px;
-  flex: 1;
-}
+
 
 

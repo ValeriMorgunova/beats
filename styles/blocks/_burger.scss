@@ -1,0 +1,55 @@
+.burger {
+  display: none;
+  position: fixed;
+  top: 30px;
+  right: 7%;
+  width: 26px;
+  height: 24px;
+  z-index: 15;
+
+  &__line {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background: #000;
+    top: 0;
+    left: 0;
+
+    &:nth-child(2){
+      top:50%;
+      transform:translateY(-50%);
+    }
+    
+    &:nth-child(3){
+      bottom:0;
+      top:initial;
+    }
+  }
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.overlay {
+  background-color: #333537;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+
+.overlay__menu--list {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.25rem;
+  color: #fff;
+  font-family: 'Play';
+}
+
+.overlay__menu--item {
+  margin-bottom: rem(10px);
+}

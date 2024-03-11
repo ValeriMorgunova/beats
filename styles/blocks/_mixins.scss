@@ -8,3 +8,21 @@
   font-family: 'Play';
   color: $light-color;
 }
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin mini-phones {
+  @media screen and (max-width: $mini-phones) {
+    @content;
+  }
+}

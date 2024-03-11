@@ -9,40 +9,58 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 56px;
+  margin-bottom: rem(56px);
 }
 
 .why__title {
-  margin-bottom: 7px;
+  margin-bottom: rem(7px);
 }
 
 .why__qual {
-  width: 590px; 
+  width: rem(590px); 
   @include text;
+
+  @include phones {
+    width: 85%;
+  }
 }
 
 .why__list {
   display: flex;
   justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .why__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 256px;
+  width: rem(256px);
   position: relative;
-  margin-right: 70px;
+  margin-right: rem(70px);
+
+  @include phones {
+    flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+  }
 
   &::after {
     content: '';
     display: block;
     position: absolute;
-    width: 67px;
-    height: 21px;
+    width: rem(67px);
+    height: rem(21px);
     background: url('../img/dots.png');
-    left: 87%;
+    left: rem(270px);
     top: 18%;
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &:last-child {
@@ -54,26 +72,39 @@
 }
 
 .why__dots {
-  margin: 0 4px;
-  padding-top: 60px;
+  margin: 0 rem(4px);
+  padding-top: rem(60px);
 }
 
 .why__img {
   @include flex;
   justify-content: center;
-  width: 128px;
-  height: 128px;
+  width: rem(128px);
+  height: rem(128px);
   border-radius: 50%;
   background: #F2F5F4;
+
+  &--logo {
+    width: rem(68px);
+    height: rem(68px);
+  }
 }
 
+
 .why__info {
-  padding: 24px 0;
+  padding: rem(24px) 0;
+  
+
+  @include phones {
+    text-align: left;
+    flex: 1;
+    margin-left: rem(12px);
+  }
 }
 
 
 .info__text {
   @include text;
-  line-height: 19.5px;
+  line-height: 19rem(5px);
 }
 
