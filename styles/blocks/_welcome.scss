@@ -57,6 +57,10 @@
   margin-bottom: rem(22px);
   word-wrap: break-word;
 
+  @include phones {
+    font-size: 2.5rem;
+  }
+
 }
 
 .welcome__text p{

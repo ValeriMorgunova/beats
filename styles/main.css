@@ -356,6 +356,11 @@ p {
   margin-bottom: 1.375rem;
   word-wrap: break-word;
 }
+@media screen and (max-width: 480px) {
+  .welcome__title {
+    font-size: 2.5rem;
+  }
+}
 
 .welcome__text p {
   font-family: "Alegreya Sans";
@@ -763,6 +768,11 @@ p {
   text-align: center;
   margin: 3.1875rem 0;
 }
+@media screen and (max-width: 480px) {
+  .order__title {
+    margin: 0;
+  }
+}
 
 .order__content {
   display: -webkit-box;
@@ -829,6 +839,11 @@ p {
   width: 100%;
   resize: none;
   margin-bottom: 1.25rem;
+}
+@media screen and (max-width: 480px) {
+  .order__input--textarea {
+    margin-bottom: 0;
+  }
 }
 
 .order__controls {
@@ -923,6 +938,11 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .buttons {
+    margin-top: 0;
   }
 }
 
