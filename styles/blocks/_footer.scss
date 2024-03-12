@@ -61,135 +61,18 @@
   }
 }
 
-.social__logo {
+.social__link--logo {
   width: rem(30px);
   height: rem(30px);
   border-radius: 50%;
   background: transparent;
   position: relative;
-}
-
-.social__logo--tg::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity .3s ease;
-  background: url('../img/css_sprites.png') -60px -10px;
-
-  @include tablets {
-    display: none;
-  }
-}
-
-.social__logo--tg::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  transition: opacity .3s ease;
-  background: url('../img/css_sprites.png') -110px -60px;
-}
-
-.social__item:hover .social__logo--tg::after  {
-  opacity: 1;
+  transition: filter .3s ease;
 }
 
 
-.social__logo--vk::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity .3s ease;
-  background: url('../img/css_sprites.png') -110px -10px;
-
-  @include tablets {
-    display: none;
-  }
+.social__link--logo:hover {
+  filter: invert(100%);
 }
 
-.social__logo--vk::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  transition: opacity .3s ease;
-  background: url('../img/css_sprites.png') -60px -110px;
-}
 
-.social__item:hover .social__logo--vk::after  {
-  opacity: 1;
-}
-
-.social__logo--fb::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity .3s ease;
-  background: url('../img/css_sprites.png') -10px -10px;
-
-  @include tablets {
-    display: none;
-  }
-}
-
-.social__logo--fb::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  transition: opacity .3s ease;
-  background: url('../img/css_sprites.png') -60px -60px;
-}
-
-.social__item:hover .social__logo--fb::after  {
-  opacity: 1;
-}
-
-.social__logo--in::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity .3s ease;
-  background: url('../img/css_sprites.png') -10px -60px;
-
-  @include tablets {
-    display: none;
-  }
-}
-
-.social__logo--in::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  transition: opacity .3s ease;
-  background: url('../img/css_sprites.png') -10px -110px;
-}
-
-.social__item:hover .social__logo--in::after  {
-  opacity: 1;
-}

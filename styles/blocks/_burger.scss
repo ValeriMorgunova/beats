@@ -42,7 +42,7 @@
   display: none;
 }
 
-.overlay__menu--list {
+.overlay__list {
   display: flex;
   flex-direction: column;
   font-size: 2.25rem;
@@ -50,6 +50,6 @@
   font-family: 'Play';
 }
 
-.overlay__menu--item {
+.overlay__item {
   margin-bottom: rem(10px);
 }

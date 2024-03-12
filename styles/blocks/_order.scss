@@ -105,6 +105,10 @@
     margin-right: 0;
   }
 
+  &:first-child {
+    margin-bottom: 5px;
+  }
+
   &--checkbox {
     .radio__visible {
       border-radius: rem(4px);
