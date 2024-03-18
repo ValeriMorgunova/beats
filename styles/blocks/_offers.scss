@@ -1,0 +1,108 @@
+.offers {
+  background: #F8FAF9;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offers__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Play';
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: rem(70px);
+  }
+}
+
+.offer__image {
+margin-right: 10%;
+
+  @include tablets {
+    width: 70%;
+    height: 70%;
+    margin-right: 0;
+  }
+}
+
+.offer__info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.offer__title {
+  font-size: rem(36px);
+  margin: rem(25px) 0;
+  
+  @include tablets {
+    text-align: center;
+    padding: 0 35px;
+  }
+}
+
+.offer__text {
+  margin-bottom: rem(24px);
+
+  @include tablets {
+    text-align: center;
+    padding: 0 15px;
+  }
+}
+
+.offer__details {
+  display: flex;
+  justify-content: start;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.offer__specific {
+  margin-right: rem(44px);
+
+  @include tablets {
+    margin-right: rem(44px);
+  }
+}
+
+.offer-specific__info {
+  font-size: rem(18px);
+  font-weight: 700;
+}
+
+.offer__order {
+  display: flex;
+  align-items: center;
+  margin-top: rem(24px);
+
+  @include tablets {
+    justify-content: center;
+  }
+
+  @include mini-phones {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.offer__price{
+  display: flex;
+  font-size: rem(36px);
+  margin-right: 13px;
+
+  @include tablets {
+    margin-right: rem(30px);
+  }
+
+  @include mini-phones {
+    padding-left: 25px;
+  }
+}
+
+

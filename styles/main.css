@@ -28,7 +28,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button {
+.button {
   border: 0;
   cursor: pointer;
   width: 163px;
@@ -477,6 +477,11 @@ p {
 .why__title {
   margin-bottom: 0.4375rem;
 }
+@media screen and (max-width: 320px) {
+  .why__title {
+    margin-bottom: 0;
+  }
+}
 
 .why__qual {
   width: 36.875rem;
@@ -600,6 +605,283 @@ p {
   line-height: 19rem 5px;
 }
 
+.offers {
+  background: #F8FAF9;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offers__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Play";
+}
+@media screen and (max-width: 768px) {
+  .offers__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 4.375rem;
+  }
+}
+
+.offer__image {
+  margin-right: 10%;
+}
+@media screen and (max-width: 768px) {
+  .offer__image {
+    width: 70%;
+    height: 70%;
+    margin-right: 0;
+  }
+}
+
+.offer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.offer__title {
+  font-size: 2.25rem;
+  margin: 1.5625rem 0;
+}
+@media screen and (max-width: 768px) {
+  .offer__title {
+    text-align: center;
+    padding: 0 35px;
+  }
+}
+
+.offer__text {
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .offer__text {
+    text-align: center;
+    padding: 0 15px;
+  }
+}
+
+.offer__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+@media screen and (max-width: 768px) {
+  .offer__details {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.offer__specific {
+  margin-right: 2.75rem;
+}
+@media screen and (max-width: 768px) {
+  .offer__specific {
+    margin-right: 2.75rem;
+  }
+}
+
+.offer-specific__info {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.offer__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .offer__order {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .offer__order {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.offer__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.25rem;
+  margin-right: 13px;
+}
+@media screen and (max-width: 768px) {
+  .offer__price {
+    margin-right: 1.875rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .offer__price {
+    padding-left: 25px;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 50%;
+  width: 79%;
+}
+@media screen and (max-width: 1200px) {
+  .slider {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    top: 36%;
+    width: 83%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider {
+    top: 32%;
+    width: 83%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .slider {
+    top: 28%;
+    width: 83%;
+  }
+}
+
+.offers__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.slider__img--turned {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.slider__img {
+  width: 1.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .offers__function {
+    display: none;
+  }
+}
+
+.offers-function__button {
+  position: relative;
+  cursor: pointer;
+}
+.offers-function__button:hover .offers-function__list {
+  opacity: 95%;
+}
+
+.offers-function__img {
+  width: 91px;
+  height: 91px;
+}
+
+.offers-function__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  opacity: 0;
+  border-radius: 3px;
+  padding: 1.5rem;
+  width: 17.0625rem;
+  height: 18.375rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 23%;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.offers-function__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offers-function__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offer-function__logo {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+}
+
 .reviews {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -616,6 +898,11 @@ p {
 
 .reviews__title {
   margin-bottom: 4.125rem;
+}
+@media screen and (max-width: 320px) {
+  .reviews__title {
+    margin-bottom: 0;
+  }
 }
 
 .reviews__block {

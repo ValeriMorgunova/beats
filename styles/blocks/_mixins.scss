@@ -9,6 +9,12 @@
   color: $light-color;
 }
 
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
 @mixin tablets {
   @media screen and (max-width: $tablets) {
     @content;

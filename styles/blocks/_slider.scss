@@ -1,0 +1,39 @@
+.slider {
+  position: absolute;
+  top: 50%;
+  width: 79%;
+
+  @include laptop {
+    width: 100%;
+  }
+
+  @include tablets {
+    top :36%;
+    width: 83%;
+  }
+
+  @include phones {
+    top: 32%;
+    width: 83%;
+  }
+
+  @include mini-phones {
+    top: 28%;
+    width: 83%;
+  }
+}
+
+.offers__slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__img--turned {
+  transform: rotate(180deg);
+}
+
+.slider__img {
+  width: rem(24px);
+  height: rem(40px);
+  cursor: pointer;
+}
