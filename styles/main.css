@@ -149,9 +149,11 @@ p {
   position: fixed;
   top: 30px;
   right: 7%;
-  width: 26px;
+  width: 28px;
   height: 24px;
-  z-index: 15;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 100;
 }
 .burger__line {
   position: absolute;
@@ -161,6 +163,8 @@ p {
   background: #000;
   top: 0;
   left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .burger__line:nth-child(2) {
   top: 50%;
@@ -177,9 +181,37 @@ p {
   }
 }
 
+.burger--active {
+  z-index: 10000;
+}
+
+.burger--active .burger__line {
+  background: #fff;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.burger--active .burger__line:nth-child(1) {
+  opacity: 0;
+}
+.burger--active .burger__line:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.burger--active .burger__line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translateY(-6px) translateX(5px);
+          transform: rotate(-45deg) translateY(-6px) translateX(5px);
+}
+
+.wrapper--active-overlay {
+  overflow: hidden;
+}
+
 .overlay {
   background-color: #333537;
   height: 100vh;
+  width: 100%;
+  top: -100%;
+  opacity: 0.01%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,7 +222,14 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  display: none;
+  position: fixed;
+  z-index: 10;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.overlay.overlay--active {
+  opacity: 1;
+  top: 0;
 }
 
 .overlay__list {
@@ -208,6 +247,9 @@ p {
 
 .overlay__item {
   margin-bottom: 0.625rem;
+}
+.overlay__item:hover {
+  opacity: 0.7;
 }
 
 .header {
@@ -1324,7 +1366,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 7.6875rem;
 }
 @media screen and (max-width: 768px) {
   .social {
@@ -1339,7 +1380,7 @@ p {
   margin-right: 0;
 }
 
-.social__link--logo {
+.social-link__logo {
   width: 1.875rem;
   height: 1.875rem;
   border-radius: 50%;
@@ -1351,7 +1392,7 @@ p {
   transition: filter 0.3s ease, -webkit-filter 0.3s ease;
 }
 
-.social__link--logo:hover {
+.social-link__logo:hover {
   -webkit-filter: invert(100%);
           filter: invert(100%);
 }

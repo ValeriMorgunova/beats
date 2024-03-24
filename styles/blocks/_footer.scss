@@ -46,7 +46,6 @@
 
 .social {
   display: flex;
-  padding-right: rem(123px);
 
   @include tablets {
     padding-right: 0;
@@ -61,7 +60,7 @@
   }
 }
 
-.social__link--logo {
+.social-link__logo {
   width: rem(30px);
   height: rem(30px);
   border-radius: 50%;
@@ -71,7 +70,7 @@
 }
 
 
-.social__link--logo:hover {
+.social-link__logo:hover {
   filter: invert(100%);
 }
 
