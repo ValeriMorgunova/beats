@@ -5,10 +5,11 @@
   right: 0;
   background: #fff;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 .footer__container {
   @include flex;
-  padding-top: rem(10px);
 
   @include phones {
     flex-direction: column;

@@ -1,7 +1,4 @@
 .reviews {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
@@ -18,12 +15,21 @@
   flex-direction: column;
 }
 
+
 .reviews__info {
-  display: flex;
+  display: none;
   background: #F8FAF9;
   width: rem(940px);
   position: relative;
   padding: rem(42px);
+  opacity: 0;
+  transition: opacity .5s ease;
+
+  &--active {
+    display: flex;
+    opacity: 1;
+    transition: opacity .5s ease;
+  }
 
   @include tablets{
     flex-direction: column;
@@ -77,7 +83,7 @@
   margin: rem(21px) 0;
 }
 
-.review__name {
+.name {
   font-size: rem(20px);
   font-weight: 700;
 }
@@ -101,15 +107,21 @@
   }
 
   &--active {
-    border: rem(4px) solid #E01F3D;
+    border: rem(5px) solid #E01F3D;
   }
+
+  &:hover {
+    border: rem(5px) solid #E01F3D;
+    transition: border .1s ease;
+  }
+  
 }
 
 .reviews__link {
   width: 100%;
   height: 100%;
-}
 
+}
 
 .reviews__logo {
   border-radius: 50%;

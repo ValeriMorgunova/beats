@@ -95,6 +95,10 @@
 .overlay__item {
   margin-bottom: rem(10px);
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &:hover {
     opacity: 0.7;
   }

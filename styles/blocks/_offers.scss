@@ -1,26 +1,28 @@
 .offers {
   background: #F8FAF9;
   position: relative;
+}
+
+.offers__list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .offers__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-family: 'Play';
 
   @include tablets {
     flex-direction: column;
     justify-content: center;
     padding-top: rem(70px);
+    overflow: hidden;
   }
 }
 
+
 .offer__image {
-margin-right: 10%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 
   @include tablets {
     width: 70%;
@@ -32,6 +34,7 @@ margin-right: 10%;
 .offer__info {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 
@@ -47,6 +50,7 @@ margin-right: 10%;
 
 .offer__text {
   margin-bottom: rem(24px);
+  color: #666666;
 
   @include tablets {
     text-align: center;
@@ -103,6 +107,16 @@ margin-right: 10%;
   @include mini-phones {
     padding-left: 25px;
   }
+}
+
+.slider__img--right {
+  transform: rotate(180deg);
+}
+
+.slider__img {
+  width: rem(24px);
+  height: rem(40px);
+  cursor: pointer;
 }
 
 

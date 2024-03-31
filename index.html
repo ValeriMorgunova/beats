@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./js/slick/slick.css">
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
@@ -132,22 +133,10 @@
         </div>
       </section>
       <section class="section offers">
-        <div class="offers__slider slider">
-          <div class="slider__button">
-            <svg class="slider__img">
-              <use xlink:href="sprite.svg#left"></use>
-            </svg>
-          </div>
-          <div class="slider__button">
-            <svg class="slider__img slider__img--turned">
-              <use xlink:href="sprite.svg#left"></use>
-            </svg>
-          </div>
-        </div>
         <div class="container container__offers">
-          <ul class="offers__list">
+          <ul class="offers__list slider">
             <li class="offers__item offer">
-              <img src="./img/offer.png" alt="" class="offer__image">
+              <img src="./img/offer-1.png" alt="" class="offer__image">
               <div class="offer__info">
                 <div class="offers__function offers-function">
                   <div class="offers-function__button">
@@ -224,40 +213,200 @@
                 </div>
               </div>
             </li>
+            <li class="offers__item offer">
+              <img src="./img/offer-2.png" alt="" class="offer__image">
+              <div class="offer__info">
+                <div class="offers__function offers-function">
+                  <div class="offers-function__button">
+                    <svg class="offers-function__img">
+                      <use xlink:href="sprite.svg#click"></use>
+                    </svg>
+                    <ul class="offers-function__list">
+                      <li class="offers-function__item">
+                        <div class="offers-function__block">
+                          <svg class="offer-function__logo">
+                            <use xlink:href="sprite.svg#bt"></use>
+                          </svg>
+                          <span class="offer-function__title">Bluetooth</span>
+                        </div>
+                        <span class="offers-function__value">4.0</span>
+                      </li>
+                      <li class="offers-function__item">
+                        <div class="offers-function__block">
+                          <svg class="offer-function__logo">
+                            <use xlink:href="sprite.svg#road"></use>
+                          </svg>
+                          <span class="offer-function__title">Дальность</span>
+                        </div>
+                        <span class="offers-function__value">12 м</span>
+                      </li>
+                      <li class="offers-function__item">
+                        <div class="offers-function__block">
+                          <svg class="offer-function__logo">
+                            <use xlink:href="sprite.svg#power"></use>
+                          </svg>
+                          <span class="offer-function__title">Зарядка</span>
+                        </div>
+                        <span class="offers-function__value">3 ч</span>
+                      </li>
+                      <li class="offers-function__item">
+                        <div class="offers-function__block">
+                          <svg class="offer-function__logo">
+                            <use xlink:href="sprite.svg#weight"></use>
+                          </svg>
+                          <span class="offer-function__title">вес</span>
+                        </div>
+                        <span class="offers-function__value">215гр</span>
+                      </li>
+                      <li class="offers-function__item">
+                        <div class="offers-function__block">
+                          <svg class="offer-function__logo">
+                            <use xlink:href="sprite.svg#garant"></use>
+                          </svg>
+                          <span class="offer-function__title">Гарантия</span>
+                        </div>
+                        <span class="offers-function__value">1 год</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <h4 class="offer__title">BEATS SOLO PRO. ЦВЕТ «КРАСНЫЙ ЦИТРУС»</h4>
+                <div class="offer__text">Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</div>
+                <ul class="offer__details">
+                  <li class="offer__specific offer-specific">
+                    <div class="offer-specific__title">Зарядка</div>
+                    <div class="offer-specific__info">2 часа</div>
+                  </li>
+                  <li class="offer__specific offer-specific">
+                    <div class="offer-specific__title">Вес</div>
+                    <div class="offer-specific__info">215 грамм</div>
+                  </li>
+                </ul>
+                <div class="offer__order">
+                  <div class="offer__price offer-price">
+                    <div class="offer-price__value">14 990</div>
+                    <div class="offer-price__currency">₽</div>
+                  </div>
+                  <button class="button offers__button">ЗАКАЗАТЬ</button>
+                </div>
+              </div>
+            </li>
+            
           </ul>
         </div>
       </section>
-      <!--<section class="section team">
-
+      <section class="section team">
+        <div class="container container__team">
+          <h2 class="team__title">КОМАНДА</h2>
+          <ul class="team__list">
+            <li class="team__item item">
+              <img src="./img/people1.png" alt="people" class="item__img">
+              <div class="item__title">
+                <a class="item__name name">Борис Федорович</a>
+                <button class="item__button" >
+                    <svg class="item__svg">
+                      <use xlink:href="sprite.svg#red-tr"></use>
+                    </svg>
+                </button>
+              </div>
+              <div class="item__info">
+                <div class="item__who">Главный технолог</div>
+                <div class="item__about">Отвечает за вкусовые качества и калорийность.</div>
+              </div>
+            </li>
+            <li class="team__item item">
+              <img src="./img/people2.png" alt="people" class="item__img">
+              <div class="item__title">
+                <a class="item__name name">Борис Федорович</a>
+                <button class="item__button" >
+                    <svg class="item__svg">
+                      <use xlink:href="sprite.svg#red-tr"></use>
+                    </svg>
+                </button>
+              </div>
+              <div class="item__info">
+                <div class="item__who">Главный технолог</div>
+                <div class="item__about">Отвечает за вкусовые качества и калорийность.</div>
+              </div>
+            </li>
+            <li class="team__item item">
+              <img src="./img/people3.png" alt="people" class="item__img">
+              <div class="item__title">
+                <a class="item__name name">Борис Федорович</a>
+                <button class="item__button">
+                    <svg class="item__svg">
+                      <use xlink:href="sprite.svg#red-tr"></use>
+                    </svg>
+                </button>
+              </div>
+              <div class="item__info">
+                <div class="item__who">Главный технолог</div>
+                <div class="item__about">Отвечает за вкусовые качества и калорийность.</div>
+              </div>
+            </li>
+            <li class="team__item item">
+              <img src="./img/people4.png" alt="people" class="item__img">
+              <div class="item__title">
+                <div class="item__name name">Борис Федорович</div>
+                <button class="item__button" >
+                    <svg class="item__svg">
+                      <use xlink:href="sprite.svg#red-tr"></use>
+                    </svg>
+                </button>
+              </div>
+              <div class="item__info">
+                <div class="item__who">Главный технолог</div>
+                <div class="item__about">Отвечает за вкусовые качества и калорийность.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section class="section version">
+      <!-- <section class="section version">
 
-      </section>-->
+      </section> -->
       <section class="section reviews">
         <div class="container container__reviews">
           <h2 class="reviews__title">ОТЗЫВЫ</h2>
           <div class="reviews__block">
-            <div class="reviews__info">
+            <div class="reviews__info reviews__info--active" id="one">
               <img src="./img/review1.png" alt="" class="review__img">
               <div class="review">
                 <h4 class="review__title">Отличный звук</h4>
                 <div class="review__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. </div>
-                <div class="review__name">Билли Айлиш</div>
+                <div class="review__name name">Билли Айлиш</div>
+              </div>
+            </div>
+            <div class="reviews__info" id="two">
+              <img src="./img/review2.png" alt="" class="review__img">
+              <div class="review">
+                <h4 class="review__title">Крутой дизайн</h4>
+                <div class="review__text">После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный продукт.  </div>
+                <div class="review__name name">Вадим Грачев
+                </div>
+              </div>
+            </div>
+            <div class="reviews__info" id="three">
+              <img src="./img/review3.png" alt="" class="review__img">
+              <div class="review">
+                <h4 class="review__title">На долго хватает заряда</h4>
+                <div class="review__text">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус. </div>
+                <div class="review__name name">Мария Орлова</div>
               </div>
             </div>
             <ul class="reviews__slider">
-              <li class="reviews__img reviews__img--active">
-                <a href="" class="reviews__link">
+              <li class="reviews__img reviews__img--active" id="one">
+                <a href="#" class="reviews__link">
                   <img src="./img/review1.png" alt="" class="reviews__logo">
                 </a>
               </li>
-              <li class="reviews__img">
-                <a href="" class="reviews__link">
+              <li class="reviews__img" id="two">
+                <a href="#" class="reviews__link">
                   <img src="./img/review2.png" alt="" class="reviews__logo">
                 </a>
               </li>
-              <li class="reviews__img">
-                <a href="" class="reviews__link">
+              <li class="reviews__img" id="three">
+                <a href="#" class="reviews__link">
                   <img src="./img/review3.png" alt="" class="reviews__logo">
                 </a>
               </li>
@@ -440,6 +589,8 @@
       </nav>
     </div>
   </div>
+  <script src="jquery-3.7.1.min.js"></script>
   <script src="script.js"></script>
+  <script src="./js/slick/slick.js"></script>
 </body>
 </html>

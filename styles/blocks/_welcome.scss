@@ -1,11 +1,13 @@
 .primary {
   background: $bg-g;
   position: relative;
+  justify-content: flex-start;
 }
 
 .welcome {
   display: flex;
   position: relative;
+  margin-top: rem(100px);
 
   &::before {
     content: '';
