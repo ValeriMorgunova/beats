@@ -15,6 +15,7 @@ html {
 body,
 html {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -85,18 +86,18 @@ img {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
 }
 
-.maincontent {
+.main-content {
     background-repeat: no-repeat;
-    min-height: 100%; 
-    min-width: 100%;  
-    flex: 1;
+    height: 100%; 
+    transition: transform 1s;
 }
 
 .section {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -17,6 +17,7 @@ html {
 body,
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -93,20 +94,21 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 
-.maincontent {
+.main-content {
   background-repeat: no-repeat;
-  min-height: 100%;
-  min-width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,11 +488,11 @@ p {
   background: #666666;
   border-radius: 50%;
 }
-.fixed__link--active {
+.fixed__link.is-active {
   background: #E01F3D;
   position: relative;
 }
-.fixed__link--active:after {
+.fixed__link.is-active:after {
   position: absolute;
   content: "";
   display: block;
