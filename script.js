@@ -84,7 +84,7 @@ let onePageScroll = () =>{
   const wrapper = document.querySelector('.wrapper');
   const content = wrapper.querySelector('.main-content');
   const pages = content.querySelectorAll('.section');
-  const points = document.querySelectorAll('.fixed__link');
+  const points = document.querySelectorAll('.fixed__item');
   const dataScrollto = document.querySelectorAll('[data-scroll-to]');
   
   let inScroll = false;

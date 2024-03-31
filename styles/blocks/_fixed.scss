@@ -16,15 +16,8 @@
   }
 }
 
-.fixed__link {
-  display: block;
-  width: rem(6px);
-  height: rem(6px);
-  background: #666666;
-  border-radius: 50%;
-
-  &.is-active {
-    background:  #E01F3D;
+.fixed__item.is-active .fixed__link {
+  background:  #E01F3D;
     position: relative;
 
     &:after {
@@ -40,5 +33,13 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-  }
+}
+
+.fixed__link {
+  display: block;
+  width: rem(6px);
+  height: rem(6px);
+  background: #666666;
+  border-radius: 50%;
+
 }
