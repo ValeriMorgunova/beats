@@ -16,7 +16,8 @@
   }
 }
 
-.fixed__item.is-active .fixed__link {
+
+.fixed__item.is-active .fixed__link{
   background:  #E01F3D;
     position: relative;
 
@@ -42,4 +43,24 @@
   background: #666666;
   border-radius: 50%;
 
+  &:hover {
+    background:  #E01F3D;
+    position: relative;
+    border-radius: 50%;
+    
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: rem(16px);
+      height: rem(16px);
+      background: transparent;
+      border-radius: 50%;
+      border: rem(1px) solid  #E01F3D;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    
+    }
+  }
 }

@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="main-content">
+  <div class="wrapper main">
+    <!-- <div class="main-content"> -->
       <section class="section primary is-active">
         <div class="container container__primary">
           <header class="header">
@@ -301,62 +301,58 @@
           <ul class="team__list">
             <li class="team__item item">
               <img src="./img/people1.png" alt="people" class="item__img">
-              <div class="item__title">
-                <a class="item__name name">Борис Федорович</a>
-                <button class="item__button" >
-                    <svg class="item__svg">
-                      <use xlink:href="sprite.svg#red-tr"></use>
-                    </svg>
-                </button>
-              </div>
-              <div class="item__info">
-                <div class="item__who">Главный технолог</div>
-                <div class="item__about">Отвечает за вкусовые качества и калорийность.</div>
+              <a href="javascript: void(0);" class="item__name name">Борис Федорович</a>
+              <div class="item__content">
+                <div class="item__content-wrapp">
+                  <div class="item__info">
+                    <div class="item__who">Главный технолог</div>
+                    <div class="item__about">
+                      <p>Отвечает за вкусовые качества и калорийность.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
             <li class="team__item item">
               <img src="./img/people2.png" alt="people" class="item__img">
-              <div class="item__title">
-                <a class="item__name name">Борис Федорович</a>
-                <button class="item__button" >
-                    <svg class="item__svg">
-                      <use xlink:href="sprite.svg#red-tr"></use>
-                    </svg>
-                </button>
-              </div>
-              <div class="item__info">
-                <div class="item__who">Главный технолог</div>
-                <div class="item__about">Отвечает за вкусовые качества и калорийность.</div>
+              <a href="javascript: void(0);" class="item__name name">Борис Федорович</a>
+              <div class="item__content">
+                <div class="item__content-wrapp">
+                  <div class="item__info">
+                    <div class="item__who">Главный технолог</div>
+                    <div class="item__about">
+                      <p>Отвечает за вкусовые качества и калорийность.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
             <li class="team__item item">
               <img src="./img/people3.png" alt="people" class="item__img">
-              <div class="item__title">
-                <a class="item__name name">Борис Федорович</a>
-                <button class="item__button">
-                    <svg class="item__svg">
-                      <use xlink:href="sprite.svg#red-tr"></use>
-                    </svg>
-                </button>
-              </div>
-              <div class="item__info">
-                <div class="item__who">Главный технолог</div>
-                <div class="item__about">Отвечает за вкусовые качества и калорийность.</div>
+              <a href="javascript: void(0);" class="item__name name">Борис Федорович</a>
+              <div class="item__content">
+                <div class="item__content-wrapp">
+                  <div class="item__info">
+                    <div class="item__who">Главный технолог</div>
+                    <div class="item__about">
+                      <p>Отвечает за вкусовые качества и калорийность.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
             <li class="team__item item">
               <img src="./img/people4.png" alt="people" class="item__img">
-              <div class="item__title">
-                <div class="item__name name">Борис Федорович</div>
-                <button class="item__button" >
-                    <svg class="item__svg">
-                      <use xlink:href="sprite.svg#red-tr"></use>
-                    </svg>
-                </button>
-              </div>
-              <div class="item__info">
-                <div class="item__who">Главный технолог</div>
-                <div class="item__about">Отвечает за вкусовые качества и калорийность.</div>
+              <a href="javascript: void(0);" class="item__name name">Борис Федорович</a>
+              <div class="item__content">
+                <div class="item__content-wrapp">
+                  <div class="item__info">
+                    <div class="item__who">Главный технолог</div>
+                    <div class="item__about">
+                      <p>Отвечает за вкусовые качества и калорийность.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
@@ -541,20 +537,6 @@
         </footer>
       </section>
     </div>
-    
-    <nav class="fixed">
-      <ul class="fixed__list">
-        <li class="fixed__item is-active"><a href="#" class="fixed__link is-active"></a></li>
-        <li class="fixed__item"><a href="#" class="fixed__link" data-scroll-to="1"></a></li>
-        <li class="fixed__item"><a href="#" class="fixed__link" data-scroll-to="2"></a></li>
-        <li class="fixed__item"><a href="#" class="fixed__link" data-scroll-to="3"></a></li>
-        <li class="fixed__item"><a href="#" class="fixed__link" data-scroll-to="4"></a></li>
-        <li class="fixed__item"><a href="#" class="fixed__link" data-scroll-to="5"></a></li>
-        <li class="fixed__item"><a href="#" class="fixed__link" data-scroll-to="6"></a></li>
-        <!-- <li class="fixed__item"><a href="#" class="fixed__link" data-scroll-to="7"></a></li>
-        <li class="fixed__item"><a href="#" class="fixed__link" data-scroll-to="8"></a></li> -->
-      </ul>
-    </nav>
 
     <a class="burger" id="burger">
       <span class="burger__line" id="line"></span>
@@ -588,8 +570,9 @@
         </ul>
       </nav>
     </div>
-  </div>
+  <!-- </div> -->
   <script src="jquery-3.7.1.min.js"></script>
+  <script src="./js/onepage-scroll/jquery.onepage-scroll.js"></script>
   <script src="script.js"></script>
   <script src="./js/slick/slick.js"></script>
 </body>

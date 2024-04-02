@@ -75,120 +75,57 @@ $(document).ready(function(){
 
 //accordeon
 
+function accordionTeam() {
+  const workers = document.querySelectorAll(".team__item");
+  const teamAccord = document.querySelector(".team__list");
+
+  teamAccord.addEventListener("click", function (event) {
+    event.preventDefault(); // скидываем стандартное состояние (что бы не кидало страницу вверх / или не перенаправляло на другую)
+    const target = event.target; // то на что мы клацнули
+   
+    if (target.classList.contains("item__name")) {
+      const worker = target.parentNode; // родитель нашей ссылки (li.team__item)
+      const content = target.nextElementSibling; //  элемент который находится рядом с рашей ссылкой на уровне (item__content)
+      const contentHeight = content.firstElementChild.clientHeight; // высота wrapper который лежит в item__content
+
+      for (const iterator of workers) {
+        if (iterator !== worker) {
+          iterator.classList.remove("team__item--active");
+          iterator.lastElementChild.style.height = 0;
+        }
+      }
+
+      if (worker.classList.contains("team__item--active")) {
+        worker.classList.remove("team__item--active");
+        content.style.height = 0;
+      } else {
+        worker.classList.add("team__item--active");
+        content.style.height = contentHeight + "px";
+      }
+    }
+  });
+}
+
+accordionTeam();
+
 //gorizont accordeon
 
 
 //onepage-scroll
 
-let onePageScroll = () =>{
-  const wrapper = document.querySelector('.wrapper');
-  const content = wrapper.querySelector('.main-content');
-  const pages = content.querySelectorAll('.section');
-  const points = document.querySelectorAll('.fixed__item');
-  const dataScrollto = document.querySelectorAll('[data-scroll-to]');
-  
-  let inScroll = false;
-  
-  addNavigation();
-  wheel();
-  keyPush();
-  
-  //   функция прокрутки к нужной странице
-  function doTransition(pageNumber){
-    const position  = `${pageNumber * (-100)}%`;
-    
-    if(inScroll) return;
-    
-    inScroll = true;
-    
-    addClass(pages);
-    
-    content.style.transform = `translateY(${position})`;
-    
-    setTimeout(() => {
-      inScroll = false;
-      addClass(points);
-    }, 1000); //transition + 300(инерция скролла)
-    
-    function addClass(arr){
-      arr[pageNumber].classList.add('is-active');
-      
-      for(const item of arr){
-        if(item != arr[pageNumber]){
-          item.classList.remove('is-active');
-        }
-      }
-    }
-  }
- 
-  // функция навигации по клику data-scroll
-  function addNavigation(){
-    for(const point of dataScrollto){
-      point.addEventListener('click' , e=>{
-        e.preventDefault();
-        doTransition(point.dataset.scrollTo);
-      })
-    }
-  }
-  
-  // функция работы с колесиком мышки
-  function wheel() {
-    document.addEventListener('wheel', e => {
-      const direct = e.deltaY > 0 ? 'up' : 'down';
-      
-      scrollToPage(direct);
-    })
-  }
-  
-  // функция отработки нажатия стрелочек на клавиатуре
-  function keyPush() {
-    document.addEventListener('keydown', e => {
-      switch (e.keyCode) {
-        case 40:
-        scrollToPage('up');
-          break;
-        case 38:
-        scrollToPage('down');
-          break;
-        default:
-          break;
-      }
-    })
-  }
-  
-  // функция определения нужной страницы нам и навешивает класс активный
-  function definePage(arr){
-    for (let i = 0; i < arr.length; i++) {
-      let iter = arr[i];
-      if (iter.classList.contains('is-active')){
-        return {
-          iterIndex: i,
-          iterActive: iter,
-          iterNext: iter.nextElementSibling,
-          iterPrev: iter.previousElementSibling
-        }
-      }   
-    }
-  }
-  
-  // функция определяет куда скроли полльзователь и вызывает doTransition
-  function scrollToPage(direct){
-    let page = definePage(pages);
-    
-    if (direct === 'up' && page.iterNext) {
-      let numPage = page.iterIndex + 1;
-      
-      doTransition(numPage);
-    }
-
-    if (direct === 'down' && page.iterPrev) {
-      let numPage = page.iterIndex - 1;
-      doTransition(numPage);
-    }
-  }
-}
-
-onePageScroll();
-
-
-
+$(".main").onepage_scroll({
+  sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+  easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                   // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+  animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+  pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+  updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+  beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+  afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+  loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+  keyboard: true,                  // You can activate the keyboard controls
+  responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                   // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                   // the browser's width is less than 600, the fallback will kick in.
+  direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+});
