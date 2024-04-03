@@ -8,11 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" type="text/css" href="./js/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
   <div class="wrapper main">
-    <!-- <div class="main-content"> -->
+    <div class="main-content">
       <section class="section primary is-active">
         <div class="container container__primary">
           <header class="header">
@@ -315,27 +316,29 @@
             </li>
             <li class="team__item item">
               <img src="./img/people2.png" alt="people" class="item__img">
-              <a href="javascript: void(0);" class="item__name name">Борис Федорович</a>
+              <a href="javascript: void(0);" class="item__name name">Алла Иванова</a>
               <div class="item__content">
                 <div class="item__content-wrapp">
                   <div class="item__info">
-                    <div class="item__who">Главный технолог</div>
+                    <div class="item__who">Специалист по упаковке</div>
                     <div class="item__about">
-                      <p>Отвечает за вкусовые качества и калорийность.</p>
+                      <p>Автор запоминающегося стиля наших батончиков.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
             <li class="team__item item">
-              <img src="./img/people3.png" alt="people" class="item__img">
-              <a href="javascript: void(0);" class="item__name name">Борис Федорович</a>
+              <div class="item__img">
+                <img src="./img/people3.png" alt="people" class="item__avatar">
+              </div>
+              <a href="javascript: void(0);" class="item__name name">Мила Рыжкова</a>
               <div class="item__content">
                 <div class="item__content-wrapp">
                   <div class="item__info">
-                    <div class="item__who">Главный технолог</div>
+                    <div class="item__who">Маркетинг</div>
                     <div class="item__about">
-                      <p>Отвечает за вкусовые качества и калорийность.</p>
+                      <p>По всем вопросам сотрудничества и рекламы писать только Миле. </p>
                     </div>
                   </div>
                 </div>
@@ -358,9 +361,44 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="section version">
-
-      </section> -->
+      <section class="section menu" id="menu">
+        <div class="container menu__container"></div>
+          <h2 class="title menu__title">ЦВЕТА</h2>
+          <ul class="acco-menu__list">
+            <li class="acco-menu__item">
+              <a class="acco-menu__link acco-menu__link--grey is-active" href="">
+                <div class="acco-menu__link-text">«Черный матовый»</div>
+              </a>
+              <div class="acco-menu__description" >
+                <div class="acco-menu__text" >
+                  Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. 
+                  Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.
+                </div>
+              </div>
+            </li>
+            <li class="acco-menu__item">
+              <a class="acco-menu__link acco-menu__link--black is-active" href="">
+                <div class="acco-menu__link-text">«Черный матовый»</div>
+              </a>
+              <div class="acco-menu__description" >
+                <div class="acco-menu__text" >
+                  Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. 
+                  Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.
+              </div>
+            </li>
+            <li class="acco-menu__item">
+              <a class="acco-menu__link acco-menu__link--red" href="" >
+                <div class="acco-menu__link-text">«Красный цитрус»</div>
+              </a>
+              <div class="acco-menu__description" >
+                <div class="acco-menu__text" >
+                  Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились. 
+                  Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.
+              </div>
+            </li>
+          </ul>
+        </div>
+			</section>
       <section class="section reviews">
         <div class="container container__reviews">
           <h2 class="reviews__title">ОТЗЫВЫ</h2>
@@ -410,46 +448,67 @@
           </div>
         </div>
       </section>
-      <!--<section class="section video">
-
-      </section>-->
+      <section class="section player">
+        <div class="container container__player">
+          <h2 class="title player__title">КАК МЫ РАБОТАЕМ</h2>
+          <div class="player-section__container">
+            <div class="player">
+              <div class="player__wrapper">
+                <div id="yt-player" class="player__elem"></div>
+                <div class="player__splash"></div>
+              </div>
+              <div class="player__controls">
+                <button class="player__start"></button>
+                <div class="player__playback">
+                  <button class="player__playback-button"></button>
+                </div>
+                <div class="player__duration">
+                  <span class="player__duration-completed">0:00</span> :
+                  <span class="player__duration-estimate">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="section order">
         <div class="container order__container">
           <h2 class="order__title">ЗАКАЖИТЕ ДОСТАВКУ</h2>
-          <form action="#" method="post" class="order__content">
+          <form class="order__content">
+            <input type="hidden" name="to" value="somwere@mail.com">
             <div class="order__col">
               <div class="order__row">
                 <label class="order__block">
-                  <div class="order__name">Имя</div>
-                  <input type="text" class="order__input">
+                  <div class="order__name" >Имя</div>
+                  <input type="text" class="order__input" name="name" >
                 </label>
                 <label class="order__block">
                   <div class="order__name">Телефон</div>
-                  <input type="text" class="order__input">
+                  <input type="text" class="order__input" name="phone">
                 </label>
               </div>
               <div class="order__row">
                 <label class="order__block">
                   <div class="order__name">Улица</div>
-                  <input type="text" class="order__input">
+                  <input type="text" class="order__input" name="street">
                 </label>
               </div>
               <div class="order__row">
                 <label class="order__block">
                   <div class="order__name">Дом</div>
-                  <input type="text" class="order__input">
+                  <input type="text" class="order__input" name="house">
                 </label>
                 <label class="order__block">
                   <div class="order__name">Корпус</div>
-                  <input type="text" class="order__input">
+                  <input type="text" class="order__input" name="frame">
                 </label>
                 <label class="order__block">
                   <div class="order__name">Квартира</div>
-                  <input type="text" class="order__input">
+                  <input type="text" class="order__input" name="flat">
                 </label>
                 <label class="order__block">
                   <div class="order__name">Этаж</div>
-                  <input type="text" class="order__input">
+                  <input type="text" class="order__input" name="floor">
                 </label>
               </div>
             </div>
@@ -457,7 +516,7 @@
               <div class="order__row">
                 <label class="order__block">
                   <div class="order__name">Коментарий</div>
-                  <textarea type="text" class="order__input order__input--textarea"></textarea>
+                  <textarea type="text" class="order__input order__input--textarea" name="comment"></textarea>
                 </label>
               </div>
               <div class="order__controls">
@@ -474,20 +533,21 @@
               </div>
               <div class="order__controls">
                 <label class="radio radio--checkbox">
-                  <input type="checkbox" class="radio__elem">
+                  <input type="checkbox" name="checkbox" class="radio__elem">
                   <div class="radio__visible"></div>
                   <div class="radio__title">Не перезванивать</div>
                 </label>
               </div>
               <div class="buttons">
-                <button class="button">ЗАКАЗАТЬ</button>
-                <button class="button__reset">Очистить</button>
+                <input type="submit" data-src="#dialog-content" value="ЗАКАЗАТЬ" class="button"></input>
+                <input type="reset" value="Очистить" class="button__reset"></input>
               </div>
             </div>
           </form>
         </div> 
       </section>
-      <section class="section map">
+      <section class="section map" >
+        <div class="map__block" id="map"></div>
         <footer class="footer">
           <div class="container footer__container">
             <div class="footer__col">
@@ -537,7 +597,7 @@
         </footer>
       </section>
     </div>
-
+    
     <a class="burger" id="burger">
       <span class="burger__line" id="line"></span>
       <span class="burger__line" id="line"></span>
@@ -570,10 +630,21 @@
         </ul>
       </nav>
     </div>
-  <!-- </div> -->
+    <div class="modal" >
+      <div class="container modal__container" id="modal">
+        <div class="modal__content">Собщение отправлено</div>
+        <div class="modal__button btn btn__close">
+          <a href="#" class="btn__text">ЗАКРЫТЬ</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="jquery-3.7.1.min.js"></script>
   <script src="./js/onepage-scroll/jquery.onepage-scroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU"></script>
   <script src="script.js"></script>
   <script src="./js/slick/slick.js"></script>
+  
 </body>
 </html>

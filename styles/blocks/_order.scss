@@ -84,8 +84,11 @@
       margin-bottom: 0;
     }
   }
+}
 
-  
+.order__input.input__error {
+  border-color: #E01F3D;
+  outline: none;
 }
 
 .order__controls {
@@ -177,9 +180,12 @@
 }
 
 .button__reset {
+  cursor: pointer;
   border: none;
   background: transparent;
   font-weight: 400;
+  color: #fff;
+  margin-left: 20px;
 }
 
 

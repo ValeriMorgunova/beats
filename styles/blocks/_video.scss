@@ -1,0 +1,15 @@
+.video {
+  background: #F8FAF9;
+  text-align: center;
+  font-family: 'Play';
+}
+
+.player__title {
+  text-align: center;
+  margin: rem(51px) 0;
+  
+
+  @include phones {
+    margin: 0;
+  }
+}

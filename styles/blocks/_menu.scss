@@ -1,0 +1,105 @@
+.menu {
+	background: url('../../img/menu.png') no-repeat;
+	background-size: cover;
+	text-align: center;
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	
+}
+
+.menu__title {
+	color: #fff;
+	position: absolute;
+	top: 6%;
+	left: 10%;
+
+	@include phones {
+	  font-size: 45px;
+	  }
+}
+
+.acco-menu__list {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.acco-menu__item {
+	float: left;
+	height: 100%;
+	
+}
+
+.acco-menu__link {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 100%;
+	float: left;
+	padding-bottom: 180px;
+
+	&--grey {
+		background: #999999;
+	}
+
+	&--black {
+		background: #000;
+	}
+
+	&--red {
+		background: #E01F3C;
+	}
+
+	 @include phones {
+	  width: 50px;
+	  }
+}
+
+.acco-menu__link-text {
+	font-family: 'Alegreya Sans';
+	color: #fff;
+	font-size: rem(36px);
+	transform: rotate(-90deg);
+	white-space: nowrap;
+
+	@include phones {
+	  font-size: 30px;
+	  }
+	
+}
+
+.acco-menu__description {
+	background: #2e3032;
+	opacity: 0.9;
+	height: 100%;
+	overflow: hidden;
+	float: left;
+    width: 0px;
+	
+}
+
+.acco-menu__text {
+
+	font-family: 'ubuntu';
+	color: #fff;
+	text-align: left;
+	width: 100%;
+	line-height: 1.7;
+	padding: 10% 7%;
+	
+	@include phones {
+		line-height: 1.3;
+		font-size: 12px;
+		word-break: break-all;
+		}
+	  
+	
+}
+

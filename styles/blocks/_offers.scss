@@ -13,7 +13,7 @@
   @include tablets {
     flex-direction: column;
     justify-content: center;
-    padding-top: rem(70px);
+    padding-top: rem(50px);
     overflow: hidden;
   }
 }
@@ -27,7 +27,11 @@
   @include tablets {
     width: 70%;
     height: 70%;
-    margin-right: 0;
+    margin-left: 15%;
+  }
+
+  @include phones {
+
   }
 }
 
@@ -45,6 +49,10 @@
   @include tablets {
     text-align: center;
     padding: 0 35px;
+  }
+
+  @include phones {
+    font-size: rem(24px);
   }
 }
 
@@ -102,6 +110,10 @@
 
   @include tablets {
     margin-right: rem(30px);
+  }
+
+  @include phones {
+    font-size: rem(24px);
   }
 
   @include mini-phones {

@@ -78,6 +78,7 @@ $(document).ready(function(){
 function accordionTeam() {
   const workers = document.querySelectorAll(".team__item");
   const teamAccord = document.querySelector(".team__list");
+  const contentAvatar = document.querySelector(".item__avatar");
 
   teamAccord.addEventListener("click", function (event) {
     event.preventDefault(); // скидываем стандартное состояние (что бы не кидало страницу вверх / или не перенаправляло на другую)
@@ -99,8 +100,10 @@ function accordionTeam() {
         worker.classList.remove("team__item--active");
         content.style.height = 0;
       } else {
+
         worker.classList.add("team__item--active");
         content.style.height = contentHeight + "px";
+
       }
     }
   });
@@ -109,6 +112,65 @@ function accordionTeam() {
 accordionTeam();
 
 //gorizont accordeon
+
+$(function(){
+  $('.acco-menu__link').on('click', function(e){
+      e.preventDefault();
+  
+        let calculateWidth = () => {
+      let windowWidth = $(window).width();
+      let links = $(".acco-menu__link");
+      let linkWidth = links.width();
+      let reqWidth = windowWidth - linkWidth * links.length;
+              console.log(reqWidth);
+      return reqWidth > 500 ? 500 : reqWidth;
+  }
+  
+          var $this = $(this),
+          container = $this.closest('.acco-menu__list'),
+          item = $this.closest('.acco-menu__item'),
+          items = container.find('.acco-menu__item'),
+          activeItem = items.filter('.is-active'),
+          content = item.find('.acco-menu__description'),
+          activeContent = activeItem.find('.acco-menu__description');
+          openWidth = calculateWidth();
+  
+          
+          if (!item.hasClass('is-active')) {
+              items.removeClass('is-active');
+              item.addClass('is-active');
+              activeContent.animate({
+                     'width' : '0px'
+              });       
+              content.animate({
+                     'width' : openWidth + 'px'
+  
+                     
+              });
+          } else {
+              item.removeClass('is-active');
+              content.animate({
+                     'width' : '0px'
+              });
+  
+          }
+  });
+  
+  
+  
+  $(document).on('click', function (e) {
+     var $this = $(e.target);
+     if (!$this.closest('.acco-menu__list').length) {
+           $('.acco-menu__description').animate({
+                 'width' : '0px'
+           });
+           $('.acco-menu__link').removeClass('is-active');
+     }
+  });
+  });
+
+
+
 
 
 //onepage-scroll
@@ -129,3 +191,104 @@ $(".main").onepage_scroll({
                                    // the browser's width is less than 600, the fallback will kick in.
   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 });
+
+//modalWindow
+
+ 
+
+//form
+
+$('.order__content').submit(e => {
+  e.preventDefault();
+
+  const form = $(e.currentTarget);
+  const name = form.find("[name = 'name']"); //берем значения инпутов
+  const phone = form.find("[name = 'phone']");
+  const comment = form.find("[name = 'comment']");
+  const to = form.find("[name = 'to']");
+
+  const modal = $(".modal");
+  const content = modal.find(".modal__content");
+
+  modal.removeClass("modal__error");
+
+  [name, phone, comment, to].forEach(field => { //проверяем поля на наличие заполненной информации
+    field.removeClass("input__error");
+    if (field.val().trim() == "") { // trim - без пробелов
+      field.addClass("input__error");
+    }
+  });
+
+  const errorFields = form.find(".input__error");
+
+  if(errorFields.length == 0) { //если все поля заполнены 
+    const request = $.ajax({ //выполняем запрос на сервер
+      url: "https://webdev-api.loftschool.com/sendmail",
+      method: "post",
+      data: {
+        name: name.val(),
+        phone: phone.val(),
+        comment: comment.val(),
+        to: to.val(),
+      },
+    })
+
+    request.done(data => {
+      content.text(data.message);
+
+    })
+
+    request.fail(data => {
+      const message = data.responseJSON.message;
+      content.text(message);
+      modal.addClass("modal__error");
+    })
+
+    request.always(() => {
+      Fancybox.show([{ src: "#modal", type: "inline" }]); //вызываем модальное окно при отправке 
+    })
+    
+  }
+})
+
+$(".btn__close").click(e => { //закрытие модала при нажатии на кнопку
+  e.preventDefault();
+
+  Fancybox.close();
+})
+
+//maps
+
+let myMap;
+
+const init = () => {
+  myMap = new ymaps.Map("map", {
+    center: [61.785021, 34.346878],
+    zoom: 11,
+    controls: []
+  })
+
+  const points = [
+    [61.812563, 34.271420],
+    [61.814960, 34.162418],
+    [61.721213, 34.484276]
+  ];
+
+  const pointsImg = new ymaps.GeoObjectCollection({}, {
+    draggable: false,
+    iconLayout: 'default#image',
+    iconImageHref: "./img/marker.png",
+    iconImageSize: [46, 57],
+    iconImageOffset: [-35, -52]
+  })
+
+  points.forEach(point => {
+    pointsImg.add(new ymaps.Placemark(point));
+  })
+
+  myMap.geoObjects.add(pointsImg);
+
+  myMap.behaviors.disable('scrollZoom');
+}
+
+ymaps.ready(init);
