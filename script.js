@@ -78,7 +78,6 @@ $(document).ready(function(){
 function accordionTeam() {
   const workers = document.querySelectorAll(".team__item");
   const teamAccord = document.querySelector(".team__list");
-  const contentAvatar = document.querySelector(".item__avatar");
 
   teamAccord.addEventListener("click", function (event) {
     event.preventDefault(); // скидываем стандартное состояние (что бы не кидало страницу вверх / или не перенаправляло на другую)
@@ -117,7 +116,7 @@ $(function(){
   $('.acco-menu__link').on('click', function(e){
       e.preventDefault();
   
-        let calculateWidth = () => {
+      let calculateWidth = () => {
       let windowWidth = $(window).width();
       let links = $(".acco-menu__link");
       let linkWidth = links.width();

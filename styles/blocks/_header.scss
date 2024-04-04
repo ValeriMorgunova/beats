@@ -6,7 +6,7 @@
   padding-top: rem(28px);
 }
 
-.menu {
+.nav {
   margin: 0 30px;
 
   @include tablets {
@@ -14,13 +14,13 @@
   }
 }
 
-.menu__list {
+.nav__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.menu__item {
+.nav__item {
   padding-right: rem(24px);
   
 
@@ -29,7 +29,7 @@
   }
 }
 
-.menu__link {
+.nav__link {
   white-space: nowrap;
 }
 
