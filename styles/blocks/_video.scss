@@ -4,6 +4,51 @@
   font-family: 'Play';
 }
 
+.player-section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  width: rem(662px);
+  height: rem(392px);
+  position: relative;
+  
+  .active {
+    .player__splash {
+      display: block;
+    }
+
+    .player__start {
+      display: block;
+      cursor: pointer;
+      width: 0;
+      height: 0;
+      border-radius: 1px;
+      background: transparent;
+      border-top: 12px solid transparent;
+      border-left: 17px solid #fff;
+      border-bottom: 12px solid transparent;
+    }
+  }
+
+  .paused {
+    .player__splash {
+      display: none;
+    }
+
+    .player__start {
+      height: 22px;
+      border-style: double;
+      border-width: 0 0 0 17px;
+      border-color: #fff;
+    }
+  }
+
+}
+
 .player__title {
   text-align: center;
   margin: rem(51px) 0;
@@ -12,4 +57,73 @@
   @include phones {
     margin: 0;
   }
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background: url(../../img/player.png) center no-repeat;
+}
+
+.player__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    background: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.player__duration {
+  color: #333333;
+  font-family: 'Play';
+}
+
+.player__start {
+  display: block;
+  cursor: pointer;
+  width: 0;
+	height: 0;
+  border-radius: 1px;
+  background: transparent;
+	border-top: 12px solid transparent;
+	border-left: 17px solid #fff;
+	border-bottom: 12px solid transparent;
+  border-right: transparent;
+}
+
+.player__playback {
+  width: rem(442px);
+  height: 4px;
+  position: relative;
+}
+
+.player__playback::before {
+  content: '';
+  position: absolute;
+  background: #333333;
+  height: 4px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: block;
+  transform: translateY(-50%);
+}
+
+.player__playback-button {
+  position: absolute;
+  background: #333333;
+  width: rem(15px);
+  height: rem(15px);
+  border: 1px solid #333333;
+  border-radius: 50%;
+  transform: translate(-50%, -45%);
 }
